@@ -16,8 +16,7 @@ public class problemD1 {
             }
 
             // TODO: compute number of good subsequences
-            long result = 0;
-
+            long[] result = 0;
 
             System.out.println(result % MOD);
         }
