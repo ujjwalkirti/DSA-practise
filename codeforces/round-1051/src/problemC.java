@@ -36,7 +36,7 @@ public class problemC {
 
             // output permutation
             for (int i = 0; i < n; i++) {
-                sb.append(permutation[i]).append(" ");
+                
             }
             sb.append("\n");
         }
