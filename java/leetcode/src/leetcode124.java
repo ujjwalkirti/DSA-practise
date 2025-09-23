@@ -10,6 +10,13 @@ public class leetcode124 {
     }
 
     public int maxPathSum(TreeNode root) {
-        return 0;
+        if (root == null) {
+            return 0;
+        }
+        int maxSum = Math.max(maxPathSum(root.left), maxPathSum(root.right));
+        if (maxSum + root.val < maxSum) {
+            return maxSum;
+        }
+        return maxSum + root.val;
     }
 }
