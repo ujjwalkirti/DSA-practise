@@ -1,11 +1,11 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class CoinCombinations1 {
-    // Define the required modulo
+public class CoinCombinations2 {
     private static final int MOD = 1_000_000_007;
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int x = sc.nextInt();
@@ -19,18 +19,15 @@ public class CoinCombinations1 {
         int[] dp = new int[x + 1];
         Arrays.fill(dp, 0);
         dp[0] = 1;
-
-        for (int i = 1; i < x + 1; i++) {
-            for (int j = 0; j < n; j++) {
-                int coin = coins[j];
-                int diff = i - coin;
-                if (diff >= 0) {
-                    // *** THIS LINE IS THE FIX ***
-                    dp[i] = (dp[i] + dp[diff]) % MOD;
+        for (int i = 0; i < n; i++) {
+            int coin = coins[i];
+            for (int j = Math.min(coin, x); j < x + 1; j++) {
+                int diff = j - coin;
+                if (diff>=0 && dp[diff] != 0) {
+                    dp[j] = (dp[j] + dp[j - coin]) % MOD;
                 }
             }
         }
-
         System.out.println(dp[x]);
     }
 }
