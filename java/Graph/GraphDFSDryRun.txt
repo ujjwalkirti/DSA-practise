@@ -1,0 +1,11 @@
+i =0
+
+stack: 0 
+
+
+vertex = 0
+
+ans= 0
+
+
+visited: t,f ,f, f,f
