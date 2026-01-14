@@ -1,0 +1,12 @@
+These are actually the good ones. Rest are slops imo.
+
+1. Sliding Window
+2. Two Pointers
+3. Binary Search
+4. Hash Map Patterns (frequency / prefix)
+5. Stack Monotonic Stack
+6. Heaps Priority Queue (Top K)
+7. Intervals Merge + Sweep Line
+8. Linked List (fast slow, reverse, cycle)
+9. Trees DFS BFS (recursion, level order)
+10. Dynamic Programming (1D/2D, knapsack, LIS)
