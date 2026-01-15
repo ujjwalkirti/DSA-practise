@@ -1,24 +1,6 @@
 import java.util.*;
 
 public class lc987 {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 
     public static void main(String[] args) {
         lc987 obj = new lc987();
@@ -59,7 +41,7 @@ public class lc987 {
         }
         Map<Integer, List<Tuple>> sortedMap = new TreeMap<>(map);
 
-        for (Integer key: sortedMap.keySet()) {
+        for (Integer key : sortedMap.keySet()) {
             List<Tuple> list = sortedMap.get(key);
 
             // Sort primarily by rowCoord and then by node value if rowCoord is equal
@@ -78,7 +60,6 @@ public class lc987 {
             }
             ans.add(columnNodes);
         }
-
 
         return ans;
     }
